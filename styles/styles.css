@@ -185,11 +185,41 @@ nav[role="navigation"] {
   justify-content: space-between;
 }
 
+.main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-right: 40px;
+}
+
 .article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   overflow: hidden;
+  width: 48%;
+  background-color: #fff;
+  margin-bottom: 40px;
+}
+
+.article,
+aside {
+  box-shadow: 0 0 2px 0 rgba(51, 51, 51, 0.08), 0 0 2px 0 rgba(51, 51, 51, 0.08);
+}
+
+.article:nth-child(2n + 1) {
+  margin-right: 30px;
+}
+
+.img-wrapper {
+  overflow: hidden;
+  height: 200px;
 }
 
 .article img {
+  width: 100%;
+  height: auto;
   transition: transform .3s, filter .3s ease-in-out;
 }
 
@@ -197,10 +227,35 @@ nav[role="navigation"] {
   transform: scale(1.1);
 }
 
-.main {
-  background-color: yellow;
-  width: 100%;
-  margin: 0 40px 40px 0;
+.article h3 {
+  padding-top: 30px;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+.article a {
+  text-decoration: none;
+}
+
+.article footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  border-top: 1px solid #e2e2e2;
+}
+
+.article footer p {
+  color: #777;
+}
+
+.text-block-wrapper {
+  padding: 30px;
+}
+
+.text-block-wrapper > p {
+  padding-bottom: 30px;
 }
 
 .aside-block {
@@ -328,6 +383,7 @@ form input[type="submit"] {
 .last-comment img {
   height: 60px;
   border-radius: 5px;
+  margin-right: 10px;
 }
 
 .last-comment p {
@@ -416,10 +472,21 @@ form input[type="submit"] {
   .logo img {
     height: 70px;
   }
+
+  .footer .logo {
+    display: none;
+  }
 }
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
+  .header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+  }
+
   .header-block {
     display: none;
   }
@@ -431,6 +498,27 @@ form input[type="submit"] {
   nav[role="navigation"],
   .search-mobile {
     display: block;
+  }
+
+  .content {
+    margin-top: 120px;
+  }
+
+  .footer .container {
+    flex-direction: column;
+  }
+
+  .footer .container div {
+    height: auto;
+    text-align: center;
+  }
+
+  .footer .container p {
+    margin: 10px 0;
+  }
+
+  .copyright {
+    padding: 10px 0;
   }
 }
 

@@ -1,9 +1,13 @@
+:root {
+  --main-orange-color: rgb(255, 130, 49); 
+}
+
 * {
   color: #444;
+  box-sizing: border-box;
 }
 
 body {
-  overflow: hidden;
   font-family: "Lato", sans-serif;
   background-color: #f4f4f4;
 }
@@ -55,6 +59,7 @@ body {
 }
 
 .social {
+  width: 120px;
   display: flex;
   justify-content: space-between;
 }
@@ -62,10 +67,6 @@ body {
 .social a {
   padding: 8px;
   display: block;
-}
-
-.social li:not(:last-child) {
-  margin-right: 20px;
 }
 
 .main-menu {
@@ -182,14 +183,147 @@ nav[role="navigation"] {
   display: flex;
 }
 
+.article {
+  overflow: hidden;
+}
+
+.article img {
+  transition: transform .3s, filter .3s ease-in-out;
+}
+
+.article:hover img {
+  transform: scale(1.1);
+}
+
 .main {
   background-color: yellow;
 }
 
-.aside {
-  background-color: blue;
+.aside-block {
+  width: 300px;
 }
 
+.aside-block > aside {
+  background-color: #fff;
+  margin-bottom: 40px;
+}
+
+.about-bg {
+  height: 150px;
+  background: linear-gradient(to top left, powderblue, pink);
+}
+
+.about-img {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  top: -50px;
+  border-radius: 50%;
+  border: 7px solid #fff;
+  width: 200px;
+  height: 200px;
+}
+
+aside h2 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.about p {
+  text-align: center;
+  padding: 30px;
+}
+
+.aside-block .social {
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.subscribe {
+  padding: 30px 0;
+}
+
+.subscribe h2 {
+  margin-bottom: 30px;
+}
+
+form input {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  padding: 10px 15px;
+  color: #b6b6b6;
+  border: 1px solid #eee;
+  font-size: 14px;
+}
+
+.subscribe input:nth-child(3) {
+  margin: 15px auto;
+}
+
+form input[type="submit"] {
+  background-color: var(--main-orange-color);
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+}
+
+.search-form {
+  padding: 30px;
+}
+
+.search-form div {
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+
+.search-form input {
+  display: inline-block;
+}
+
+.search-form input[type="text"] {
+  width: 63%;
+}
+
+.search-form input[type="submit"] {
+  width: 35%;
+}
+
+.tags {
+  padding: 30px 0;
+}
+
+.tags div {
+  text-align: center;
+}
+
+.tags a {
+  display: inline-block;
+  padding: 6px;
+  margin: 6px;
+  background-color: rgb(115, 115, 233);
+  text-decoration: none;
+  color: #fff;
+}
+
+.last-comment {
+  padding: 30px 0;
+}
+
+.last-comment div {
+  display: flex;
+}
+
+.last-comment img {
+  height: 100px;
+  border-radius: 5px;
+}
+
+/* FOOTER */
 .footer {
   background-color: pink;
 }

@@ -1,2 +1,2 @@
 
-*** https://rojer1989.github.io/bsa2019-1/ ***
+# https://rojer1989.github.io/bsa2019-1/

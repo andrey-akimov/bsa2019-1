@@ -578,7 +578,7 @@ form input[type="submit"]:hover {
     justify-content: center;
   }
 
-  nav,
+  nav[role="navigation"],
   .search-mobile {
     display: block;
   }

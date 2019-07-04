@@ -180,7 +180,9 @@ nav[role="navigation"] {
 
 /* CONTENT */
 .content {
+  margin-top: 40px;
   display: flex;
+  justify-content: space-between;
 }
 
 .article {
@@ -197,6 +199,8 @@ nav[role="navigation"] {
 
 .main {
   background-color: yellow;
+  width: 100%;
+  margin: 0 40px 40px 0;
 }
 
 .aside-block {
@@ -238,7 +242,7 @@ aside h2 {
 
 .about p {
   text-align: center;
-  padding: 30px;
+  padding: 0 30px 30px;
 }
 
 .aside-block .social {
@@ -344,7 +348,43 @@ form input[type="submit"] {
 
 /* FOOTER */
 .footer {
-  background-color: pink;
+  background-color: #333;
+  padding: 30px 0;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.footer .social i,
+.footer p,
+.footer a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer h4 {
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.copyright {
+  padding: 20px 0;
+  text-align: center;
+  background-color: #222;
+  color: #888;
 }
 
 

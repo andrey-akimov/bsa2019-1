@@ -208,6 +208,10 @@ nav[role="navigation"] {
   margin-bottom: 40px;
 }
 
+.aside-block > aside:not(:first-child) {
+  padding: 30px 20px;
+}
+
 .about-bg {
   height: 150px;
   background: linear-gradient(to top left, powderblue, pink);
@@ -239,11 +243,7 @@ aside h2 {
 
 .aside-block .social {
   margin: 0 auto;
-  padding: 20px 0;
-}
-
-.subscribe {
-  padding: 30px 0;
+  padding: 0;
 }
 
 .subscribe h2 {
@@ -253,7 +253,7 @@ aside h2 {
 form input {
   display: block;
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
   padding: 10px 15px;
   color: #b6b6b6;
   border: 1px solid #eee;
@@ -269,10 +269,6 @@ form input[type="submit"] {
   color: #fff;
   text-transform: uppercase;
   border: none;
-}
-
-.search-form {
-  padding: 30px;
 }
 
 .search-form div {
@@ -316,11 +312,34 @@ form input[type="submit"] {
 
 .last-comment div {
   display: flex;
+  justify-content: space-between;
+}
+
+.last-comment div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .last-comment img {
-  height: 100px;
+  height: 60px;
   border-radius: 5px;
+}
+
+.last-comment p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 190px;
+}
+
+.last-comment b {
+  font-weight: bold;
+}
+
+.last-comment span {
+  font-size: 14px;
+  color: #999;
 }
 
 /* FOOTER */
